@@ -1,4 +1,5 @@
 import * as cowsay from 'cowsay';
+import * as lolcatjs from 'lolcatjs';
 
 function addition(nb1, nb2) {
     const result = nb1 + nb2;
@@ -15,4 +16,5 @@ const message = cowsay.think({
     f: 'squirrel'
 });
 
-console.log(message);
+lolcatjs.options.seed = Math.round(Math.random() * 1_000);
+lolcatjs.fromString(message);
